@@ -6,7 +6,7 @@ function App() {
 
   const [results,  setResults] = useState([]);
 
-  useEffect(() => { fetch('https://randomuser.me/api/?results=100')
+  useEffect(() => { fetch('https://randomuser.me/api/?results=10')
   .then(response => response.json())
   .then(data =>  {
     setResults(data.results)
@@ -15,7 +15,7 @@ function App() {
  
 
   return (
-    <div>
+    <div className="p-2 md:p-4 md:flex justify-evenly flex-wrap">
       {results.map((result, index) => {
         return (
         <ContactCard
